@@ -75,6 +75,7 @@ export const chinese = {
     visibility_1: '可见性为：',
     visibility_2: '（仅自己可见）',
     visibility_3: '（任何人可见）',
+    visibility_4: '（仅本地用户可见）',
     getting: '拉取数据'
   },
   welcom: {

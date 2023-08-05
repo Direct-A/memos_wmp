@@ -7,6 +7,7 @@ Page({
   data: {
     halfDialog: 'closeHalfDialog',
     showSidebar: false,
+    showCeeator: true,
     state: app.language.english.common.loading,
     memos: wx.getStorageSync('memos') ? wx.getStorageSync('memos') : [],
     onlineColor: '#eeeeee',
@@ -16,7 +17,7 @@ Page({
     shareImgUrl: '',
     showTips: false,
     limit: 20,
-    showExplore: false,
+    showExplore: true,
     x: 0
   },
 
@@ -551,6 +552,7 @@ Page({
         }
       }
     } else if (item.key == "memo-visibility") {
+      // 设置 memos 可见性的实现逻辑
       if (item.value == "\"PRIVATE\"") {
         item.value = "\"PUBLIC\""
         for (let i = 0; i < me.userSettingList.length; i++) {
